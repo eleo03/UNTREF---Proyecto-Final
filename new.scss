@@ -1,0 +1,41 @@
+
+.container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas:
+    "header header header header header header"
+    "carru  carru  carru  carru  carru  carru"
+    "box    box    box    box    box    box"
+    "footer footer footer footer footer footer";
+}
+
+main {
+    border: 1px solid;
+    grid-area: header;
+    grid-column: span 12;
+    grid-row: span 2;
+}
+
+.carrusel {
+    grid-area: carru;
+    grid-column: span 10;
+    border: 1px solid;
+    grid-row: span 2;
+}
+
+.category_container {
+    grid-area: box;
+    grid-row: span 6;
+    grid-column: span 10;
+    border: 1px solid;
+    max-width: 1000px;
+}
+
+footer {
+    grid-area: footer;
+    grid-column: span 12;
+    grid-row: span 2;
+    border: 1px solid;
+}
